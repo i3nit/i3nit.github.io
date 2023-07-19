@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          昔日旗舰，Galaxy S8 与三星的辉煌沉沦 - Blog | 3nit 的博客
+        
+    </title>
+
+    <link rel="canonical" href="https://3nit.website/2022/09/06/GalaxyS8_WhenGloryComesDown/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">3nit&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://3nit.website/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        /* background-image: url('head.jpg') */
+        /* background-image: url('head.jpg') */
+        background-image: url('head.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#Samsung" title="Samsung">Samsung</a>
+                        
+                          <a class="tag" href="/tags/#炒冷饭" title="炒冷饭">炒冷饭</a>
+                        
+                          <a class="tag" href="/tags/#数码" title="数码">数码</a>
+                        
+                          <a class="tag" href="/tags/#手机" title="手机">手机</a>
+                        
+                    </div>
+                    <h1>昔日旗舰，Galaxy S8 与三星的辉煌沉沦</h1>
+                    <h2 class="subheading">迟来的评测</h2>
+                    <span class="meta">
+                        Posted by 3nit on
+                        2022-09-06
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>我所爱的那个三星，始于S6，终于S10。<br>S10到20的 “断崖式进步”，标志着两个时代的分割。从那年开始，S20毫无美感的后摄布局、S21的塑料后盖、S20、21、22 从曲到平的屏幕、跟风式的大小旗舰、消失的Note产品线，历史的倒车似乎在不断地提醒着我，高东真的时代不在了。<br>可幸的是，S8曾经的辉煌还在我们身边触手可及。<br>这是一个迟来的评测，以此纪念陪伴我高中三年的Galaxy S8。</p>
+<hr>
+<p>这篇图文有一个内容相同的23分钟视频版本，欢迎观看，链接如下：  </p>
+<div style="position: relative; padding: 30% 45%;"><br><iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=985341610&bvid=BV1Qt4y177AA&cid=824712930&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><br></div>
+
+<blockquote>
+<p>视频版本</p>
+</blockquote>
+<hr>
+<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p><img src="Main.00_00_52_16.Still002.png" alt></p>
+<blockquote>
+<p>这是我印象中最深的一个S8广告片，“Unbox Your Phone”的广告语深入我心。</p>
+</blockquote>
+<p><strong>Unbox your phone.</strong><br>2017年，Galaxy S8就这么来了。全面屏的时代就这么来了。</p>
+<p><img src="Main.00_01_31_10.Still007.png" alt></p>
+<p>我不知道还有没有人记得 S6 edge 广告词中的那一句“让未来现在就来”</p>
+<p><img src="Main.00_02_36_24.Still010.png" alt></p>
+<blockquote>
+<p>“让未来，现在就来”</p>
+</blockquote>
+<p>打动我的着实是科技的美感。</p>
+<p><img src="Main.00_03_07_18.Still011.png" alt></p>
+<blockquote>
+<p>7年前曲面屏就被三星玩的很花</p>
+</blockquote>
+<p>那时的S6 edge就已经把曲面屏的美学功能发挥到了极致，让我印象深刻的是，第一次见到S6 edge放在桌子上时，电话铃声响起，屏幕两侧亮起的光带从弯曲的屏幕边缘发散，倒映在桌面上，随着铃声流动起伏。</p>
+<p><img src="Main.00_03_19_04.Still013.png" alt></p>
+<p>于我而言，曲面屏似乎总有一种精致感，我不清楚是这种感受是否是和Galaxy绑定的，但在这样的主观感受的影响下，三年前，我买了一台S8；三年后，一台S22到手。</p>
+<p><img src="Main.00_03_29_58.Still014.png" alt></p>
+<blockquote>
+<p>S8与S22</p>
+</blockquote>
+<h2 id="钉子户"><a href="#钉子户" class="headerlink" title="钉子户"></a>钉子户</h2><p>我不敢自称S8钉子户，在相伴3年后，今天6月她已经退居二线了。  </p>
+<p>网络上“钉子户”一词的兴起，最初是源于一句对发布4年后依然坚挺的小米6的调侃。由于骁龙835优秀的功耗表现，还有当年小米还算不错的MIUI和极度丰富的第三方刷机资源，换一块新电池，小米6在很长一段时间内还能保持比较流畅可用、续航良好的状态。  </p>
+<p>尽管依然有很多人自称S8钉子户，但同为骁龙835的S8命运却与小米6不尽相同了。A73核心原本的2.45GHz的最高主频被限制在了2.35GHz、仅仅3000mAh的电池和一块5.8吋的AMOLED耗电大户都使其性能和续航表现不如人意。S8还有Exynos版本，但在实际体验上与骁龙版本差别并不大。</p>
+<p><img src="Main.00_04_31_56.Still016.png" alt></p>
+<blockquote>
+<p>续航感人</p>
+</blockquote>
+<p>而第三方刷机资源的匮乏，骁龙版的S8刷上TWRP、刷上Magisk就玩算到头了。  </p>
+<p>在2017年她的表现并不算差，但在今天，亮屏续航不足3小时、运行国产APP卡顿缓慢，名噪一时的S8显然该退役了。  </p>
+<p>抛开那些不谈，直至今天，S8在一些方面仍然“先于时代”。<br>继承自Note7的虹膜识别很有科技感，摘下眼镜后解锁速度还是相当快的。</p>
+<p><img src="Main.00_05_19_51.Still019.png" alt></p>
+<p>传统的心率/血氧饱和度传感器依然保留，除了简单的健康监测，还可以自拍的时候当快门用。</p>
+<p><img src="Main.00_05_24_19.Still020.png" alt></p>
+<blockquote>
+<p>心率/血氧饱和度传感器</p>
+</blockquote>
+<p><img src="Main.00_05_29_13.Still021.png" alt></p>
+<blockquote>
+<p>用来当自拍快门</p>
+</blockquote>
+<p>三星一贯的按压式Home键其实并没有取消，只是做成了屏幕压感，按下时有模拟的振动，虽然效果一般吧。</p>
+<p><img src="Main.00_05_37_35.Still022.png" alt></p>
+<p>对于那些苛刻要求，要说没有双扬声器，刷个模块上去就有了嘛；没有高刷新率屏幕，有2k HDR“全视曲面屏”还想要啥；没有线性马达……其实是有的…</p>
+<p><img src="Main.00_05_56_06.Still023.png" alt></p>
+<blockquote>
+<p>2K HDR</p>
+</blockquote>
+<p>早在魅族把高素质的振动马达介绍到业界之前，三星就已经“先于时代”地用上了振动清脆的Z轴线性马达。Z轴马达的运动径向是垂直于手机屏幕的，所以当手机在口袋里或桌面上时，共振的作用使得振感强烈，也很响亮，然而从S22开始却换成了X轴马达，实在遗憾。  </p>
+<h2 id="三星使用手册"><a href="#三星使用手册" class="headerlink" title="三星使用手册"></a>三星使用手册</h2><p>有时一句调侃，就可能成了刻板印象或者先入为主的论调。OneUI真的不堪吗？</p>
+<p><img src="Main.00_06_49_54.Still025.png" alt></p>
+<p>或许是的，设置列表内容繁琐复杂；导航栏按钮、主屏幕、通知面板、锁屏页面的自定义功能，都需要额外下载。</p>
+<p><img src="Main.00_07_03_16.Still027.png" alt></p>
+<blockquote>
+<p>三星使用手册之Good lock</p>
+</blockquote>
+<p>但话说回来，设置中的相关功能推荐，是OneUI率先引进的；</p>
+<p><img src="Main.00_07_11_33.Still026.png" alt></p>
+<blockquote>
+<p>设置中相关功能推荐</p>
+</blockquote>
+<p>高级自定义功能需要下载，也是为了给一般用户更少繁杂、给极客用户更多自由。我习惯拿到新设备时先探索菜单、设置，但即使在使用OneUI三年后，我还是不能详细知晓每一项设置功能；在S22上的OneUI 4.0中，还能发现有意思的新功能。  </p>
+<p>与其说繁杂不如说繁多；与其说细碎不如说细节。繁多的功能和细节，带给我的，更多的是拿到新设备一般的、探索未知功能的新鲜感。  </p>
+<p>抛开争议，OneUI并不完美，动画衔接的卡顿掉帧不少见、三星的自家广告时常会涌向通知栏、大陆版本本地化App设计缺少统一规范；但优秀的后台管理、恰到好处的本地化功能、与屏幕交相呼应的圆角半径，<br>还有 Bixby 姐姐贴心的提醒、动听的声音、每早轻柔缓和的起床铃声，都让人难以释怀。</p>
+<p><img src="Main.00_08_08_56.Still030.png" alt></p>
+<blockquote>
+<p>恰到好处的圆角</p>
+</blockquote>
+<p><img src="Main.00_08_03_03.Still029.png" alt></p>
+<blockquote>
+<p>稀烂的UI</p>
+</blockquote>
+<p><img src="Main.00_08_14_23.Still031.png" alt></p>
+<blockquote>
+<p>Bixby 姐姐！</p>
+</blockquote>
+<p>19年，鸿蒙OS取代EMUI、OPPO迎来了colorOS 6的重塑；20年，VIVO的OriginOS一改往昔，全面革新；21年，一加也投入了colorOS的怀抱。  </p>
+<p>在业界纷纷重视操作系统的浪潮来临前，三星敏锐地察觉到业界动向，在2019年的S10上首发了OneUI，并向旧机型S8推送OneUI 1.0与Android P底层更新，至此，S8成了OneUI官方支持的最后一个S系列机型。  </p>
+<p>从Android N 到 P，从Samsung Experience到OneUI，亦是体验进步，亦是卓识远见，亦是一局大棋。而S8有幸做了一枚棋子，见证了这个从落后到赶超的历史时刻。</p>
+<p><img src="Main.00_09_29_29.Still032.png" alt></p>
+<h2 id="印象派"><a href="#印象派" class="headerlink" title="印象派"></a>印象派</h2><p>这个Tag是我编的，其实是说相机。</p>
+<p><img src="Main.00_09_46_36.Still034.png" alt></p>
+<p>2017年，是三星入局多摄像头的第一年，但只是尝试性的在Note8上搭载了第二颗长焦镜头，S系列仍然是单摄。<br>2017年，也是业界早期布局计算摄影的一年，三星、苹果、谷歌，都各自瞅准了一颗传感器，在接下来的几年持续优化算法。从S7用到S10，这颗1/2.55”、12MP的CMOS也出现在S8的后置摄像头，稍加打磨，更名叫IMX333。 光圈f/1.7，等效焦段 26mm，录制最高4K 30fps 或480p 240fps，比起后代S9，少了960fps凝视拍摄和可变光圈。</p>
+<p><img src="Main.00_09_58_09.Still035.png" alt></p>
+<blockquote>
+<p>Pixel 2的主打相机功能</p>
+</blockquote>
+<p>三星的相机算法，显然不如谷歌那样优秀，但S8是三星在计算摄影上积累技术经验的一个台阶，能从中看出今天S系列的影像调教风格。</p>
+<p><img src="Main.00_10_47_52.Still036.png" alt></p>
+<p>在迅速进步的移动影像技术浪潮下，S8早已远离“优秀”的队列：长焦缺失、视频掉帧、噪点感人、涂抹成了印象派作品。<br><img src="Main.00_11_19_45.Still039.png" alt></p>
+<p><img src="Main.00_11_21_56.Still040.png" alt></p>
+<blockquote>
+<p>这涂抹，这笔触，印象派了吧</p>
+</blockquote>
+<p>但无论“夜视仪”级的暗光表现、迅速准确地全像素相位对焦还是稳定的光学防抖，至今也未必能全部成为标配；配上GCam，也能与今天的不少中端手机一较高下。</p>
+<p><img src="Main.00_11_28_02.Still041.png" alt></p>
+<p><img src="Main.00_11_29_08.Still042.png" alt></p>
+<blockquote>
+<p>当年的夜视仪</p>
+</blockquote>
+<p>26mm，应该也算作“记忆中的焦段”了吧。至少我的S8，为我留住了过去三年里，高中生涯的记忆。  </p>
+<h2 id="温润如玉"><a href="#温润如玉" class="headerlink" title="温润如玉"></a>温润如玉</h2><p>视频开头说的那种精致感。S22一脉相承，S8亦一脉相承。</p>
+<p><img src="Main.00_12_42_52.Still044.png" alt></p>
+<blockquote>
+<p>S22一脉相承的精致感</p>
+</blockquote>
+<p>当光线灵动地流转过顺滑的机身，从玻璃的正面流向自然弯曲的侧边，在那里挤压堆积；当光线越过平滑的铝合金中框，跃向玻璃的背面，又沿着同样弯曲的另一侧，在那一刻，迸发、喷渤。</p>
+<p><img src="Main.00_01_19_50.Still006.png" alt></p>
+<p><img src="Main.00_13_08_13.Still048.png" alt></p>
+<p>说她“温润如玉”。像玉石的沉稳大气，挺过风雨，温和依旧；像美人迟暮，添了皱纹，气质还是那样迷人。铝合金或许挡不住伴我三年的汗水的侵蚀，大猩猩玻璃却耐得住一朝一夕岁月的寂寞。</p>
+<p><img src="Main.00_13_28_42.Still049.png" alt></p>
+<blockquote>
+<p>中框掉漆了</p>
+</blockquote>
+<p><img src="Main.00_14_36_03.Still056.png" alt></p>
+<p>说她“温润如玉”。每一条接缝，每一个圆角，每一个弧形都配合得天衣无缝、浑然一体。金属与玻璃的碰撞，如果说S22那样的，是硬朗挺拔，那么S8那样的，则是柔软圆滑。</p>
+<p><img src="Main.00_13_55_06.Still053.png" alt></p>
+<blockquote>
+<p>S22的硬朗挺拔</p>
+</blockquote>
+<p><img src="Main.00_14_01_55.Still054.png" alt></p>
+<blockquote>
+<p>S8的柔软圆滑</p>
+</blockquote>
+<p>握在手中，稍施用力，便流畅地从正面反转到背面。</p>
+<p><img src="Main.00_14_29_23.Still055.png" alt></p>
+<p>说她“温润如玉”，是美学上的匀称。平衡的重心，仅仅158g的重量，68.1mm的宽度，8mm的厚度，拿在手上，轻盈而不失沉稳，匀称而不失一手掌握的安全感。</p>
+<p><img src="Main.00_13_01_27.Still047.png" alt></p>
+<p>额头和下巴对应牢牢地将剔透的屏幕钳在其中，相机、指纹、闪光灯，不加约束，却井然有序，背面的元素沿着中心线对称平整地排列，前后两块曲率一致的热成型玻璃交相呼应，中框上的每一处注塑断点都安排得妥善而恰当，两侧略微互相错开而又排布均匀的按键，则在美学和实用的观点中找到了绝佳的平衡。</p>
+<p><img src="Main.00_14_46_57.Still057.png" alt></p>
+<p><img src="Main.00_12_45_55.Still045.png" alt></p>
+<p>说她“温润如玉”。灯光的映衬下，曲面屏好像又多了几分玉石的晶莹、氤氲，而不失玻璃的清透、灵动。当屏幕中的内容渐渐滑出，在边缘随着屏幕的曲线自然地弯折卷动，随着指尖的移动，轻盈平静的滑离，直到隐没在屏幕和边框的缝隙里，仿佛随着机身流畅的曲面移到背面，平淡中又有些惊喜，惊艳又不失沉稳的周到和疏离。</p>
+<p><img src="Main.00_15_19_42.Still058.png" alt></p>
+<p><img src="Main.00_15_33_44.Still059.png" alt></p>
+<p>5年前，这块1440p、Super AMOLED、5.8吋的“全视曲面屏”足以惊叹业界；以当今的眼光看，570ppi、HDR10、优秀的色准和均一的亮度，仍不失为一块优秀的屏幕，而屏幕压感、极高的像素密度，则写照着那个在简单中追究极致的三星。  </p>
+<p>谁还记得那年的手机长什么样儿呢？</p>
+<p><img src="Main.00_16_46_10.Still063.png" alt></p>
+<blockquote>
+<p>同年的iPhone7</p>
+</blockquote>
+<p>前面有开创性的Note edge，S6 edge 并不是三星第一款带有曲面屏的手机。前面有开创性的小米MIX，S8也并不是第一款搭载全面屏的手机。或许S8并不是那把划时代的利刃，但第一次看到S8宣传片的时侯，我脑瓜子嗡嗡的，有那么一刻，仿佛“未来，现在就来了！”</p>
+<p><img src="Main.00_17_36_05.Still071.png" alt></p>
+<blockquote>
+<p>未来，现在就来了！</p>
+</blockquote>
+<p><img src="Main.00_17_03_01.Still068.png" alt></p>
+<h2 id="辉煌沉沦"><a href="#辉煌沉沦" class="headerlink" title="辉煌沉沦"></a>辉煌沉沦</h2><p>2016年，三星电子如期收购了哈曼国际和QD Vison，本是事业蒸蒸日上的一年，但随着世界各地接连燃烧的电池，一同跌破的除了三星实现“世代一致”的愿景，还有韩国股市的一片红色。我还记得，2017年的内存价格真的很贵。</p>
+<p><img src="Main.00_19_02_32.Still076.png" alt></p>
+<blockquote>
+<p>视频记录的Note7起火事件</p>
+</blockquote>
+<p><img src="Main.00_19_13_52.Still077.png" alt></p>
+<blockquote>
+<p>三星电子缩紧产能，内存大涨价</p>
+</blockquote>
+<p>这其中当然有中国三星的作风问题，但Note7事件显然还是让70%的中国大陆用户拒绝了三星手机。</p>
+<p><img src="Main.00_19_22_22.Still078.png" alt></p>
+<blockquote>
+<p>确实是我们中国三星</p>
+</blockquote>
+<p>面对来自全球的信任危机和经济损失，三星电子显然寄希望于风口浪尖的下一代S旗舰，为她配备了超越时代的屏幕、传承自Note7的虹膜识别技术，更加安全的凝胶电池、延续至今的安全提醒。S8是集大成者，她勇敢地立在岬角之巅，肩负为三星电子正名的重任，扛起行业的下个时代的担当。  </p>
+<p>她身上有记忆，有传承，有蜕变，有创新。铭记着疏忽大意造成的失败，警醒着后人；传承着家族式的精致、严谨、一丝不苟；大胆地将曲面屏立为标配，把16：9的屏幕带入历史；创新地unbox，将科幻与现实拉近一大步，大刀阔斧地向着真“全面屏”的理想迈进。  </p>
+<p>S8系列成功吗？中国三星步步缩减的市场份额指明着，在这个角度，显然不是；但站在历史的一面，或许是的。  </p>
+<p>这些年，耳机孔、2K屏、曲面屏，正渐渐地从三星的产品线上消失，放弃了追求，放弃了信仰。<br>当曲面屏被奉为异端，当美学的匀称让位于所谓的手感，当没人记得那个腰圆形的主页键，当三星自己也认为2K屏幕是个浪费时，当S8的辉煌落幕时，一句“三丧”的谐音玩笑，是否成了现实？</p>
+<p><img src="Main.00_21_13_08.Still082.png" alt></p>
+<blockquote>
+<p>S20系列，应当叫做三星的耻辱机</p>
+</blockquote>
+<p>这些年，他们显然忘了那年加班到深夜赶工S8的激情，显然忘了从谷底爬起的汗水和艰辛，忘了先辈对美学和设计的极致追求，也忘了那个正向未来阔步前行，用匠心创造的辉煌的时代。  </p>
+<p>今天，尽管她的荣光褪去，我依然会铭记她和他们曾经的辉煌；也永远感谢这个，她与MIX、iPhone X和众多追随者一起开创的，新时代。</p>
+<p><img src="Main.00_22_23_47.Still084.png" alt></p>
+<blockquote>
+<p>新时代</p>
+</blockquote>
+<p>可能这时候，就差一曲 Over the Horizon 2018吧。  </p>
+<p>致 伴我三年的Galaxy S8。    </p>
+<hr>
+<p>如有纰漏，敬请指正！</p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2022/05/04/WeAreNotReady/" data-toggle="tooltip" data-placement="top" title="# We Are Not Ready Yet #">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Samsung" title="Samsung">Samsung</a>
+                        
+                          <a class="tag" href="/tags/#炒冷饭" title="炒冷饭">炒冷饭</a>
+                        
+                          <a class="tag" href="/tags/#数码" title="数码">数码</a>
+                        
+                          <a class="tag" href="/tags/#手机" title="手机">手机</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://3nit.website/" target="_blank">3nit&#39;s Blog</a></li>
+                    
+                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "3nit-website";
+    var disqus_identifier = "https://3nit.website/2022/09/06/GalaxyS8_WhenGloryComesDown/";
+    var disqus_url = "https://3nit.website/2022/09/06/GalaxyS8_WhenGloryComesDown/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/iNitSans">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/3nit">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/6076241093">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/nit.san.904">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/i3nit">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/3-nit-7968a422a">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 　 2023 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://3nit.website/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = '3nit.website';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;    
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="https://3nit.website/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
