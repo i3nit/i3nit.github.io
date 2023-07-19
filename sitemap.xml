@@ -4,7 +4,7 @@
   <url>
     <loc>https://3nit.website/2022/05/04/WeAreNotReady/</loc>
     
-    <lastmod>2023-07-13</lastmod>
+    <lastmod>2023-07-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +76,7 @@
 
   <url>
     <loc>https://3nit.website/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,84 +84,84 @@
   
   <url>
     <loc>https://3nit.website/tags/%E9%AB%98%E4%B8%AD/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/%E8%A7%A3%E8%B0%9C/</loc>
-    <lastmod>2023-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://3nit.website/tags/%E6%91%84%E5%BD%B1/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/testing/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/temporary/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://3nit.website/tags/%E6%91%84%E5%BD%B1/</loc>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/JavaScript/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/%E7%BF%BB%E8%AF%91/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/OS/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/Unix/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/tags/Linux/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -170,14 +170,14 @@
   
   <url>
     <loc>https://3nit.website/categories/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://3nit.website/categories/%E4%BA%A7%E5%93%81%E5%9B%BE/</loc>
-    <lastmod>2023-07-15</lastmod>
+    <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
