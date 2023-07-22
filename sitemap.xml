@@ -113,13 +113,6 @@
   </url>
   
   <url>
-    <loc>https://3nit.website/tags/%E6%91%84%E5%BD%B1/</loc>
-    <lastmod>2023-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://3nit.website/tags/testing/</loc>
     <lastmod>2023-07-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -128,6 +121,13 @@
   
   <url>
     <loc>https://3nit.website/tags/temporary/</loc>
+    <lastmod>2023-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://3nit.website/tags/%E6%91%84%E5%BD%B1/</loc>
     <lastmod>2023-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
