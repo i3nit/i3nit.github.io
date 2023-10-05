@@ -31,8 +31,8 @@
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    <!-- <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.css">
 
     <!-- Hux Delete, sad but pending in China
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -100,14 +100,14 @@
 
                         
                         <li>
-                            <a href="/archives/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archives/">Archives</a>
                         </li>
                         
                     
@@ -432,7 +432,7 @@
 <p>本文基于开源项目 <a href="https://github.com/gyroflow/gyroflow" target="_blank" rel="noopener">Gyroflow</a> 及 <a href="https://github.com/gyroflow/FlowShutter" target="_blank" rel="noopener">FlowShutter</a> 撰写。</p>
 </blockquote>
 <blockquote>
-<p>特别鸣谢 <a href="https://space.bilibili.com/629546720/?spm_id_from=333.999.0.0" target="_blank" rel="noopener">@5V1A</a> 提供技术支持！</p>
+<p>特别鸣谢 <a href="https://space.bilibili.com/629546720/" target="_blank" rel="noopener">@5V1A</a> 提供技术支持！</p>
 </blockquote>
 
 
@@ -461,20 +461,6 @@
 
             </div>
     <!-- Side Catalog Container -->
-        
-            <div class="
-                col-lg-2 col-lg-offset-0
-                visible-lg-block
-                sidebar-container
-                catalog-container">
-                <div class="side-catalog">
-                    <hr class="hidden-sm hidden-xs">
-                    <h5>
-                        <a class="catalog-toggle" href="#">CATALOG</a>
-                    </h5>
-                    <ul class="catalog-body"></ul>
-                </div>
-            </div>
         
 
     <!-- Sidebar Container -->
@@ -510,7 +496,7 @@
                     
                         <li><a href="https://3nit.website/" target="_blank">3nit&#39;s Blog</a></li>
                     
-                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+                        <li><a href="https://space.bilibili.com/629546720/" target="_blank">5V1A</a></li>
                     
                 </ul>
                 
@@ -590,23 +576,24 @@
                         <a target="_blank" href="https://twitter.com/iNitSans">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
                 
                 
                     <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/3nit">
+                        <a target="_blank" href="https://space.bilibili.com/34945032/">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                <!-- <i class="fa  fa-stack-1x fa-inverse">知</i> -->
+                                <i class="fa-brands fa-bilibili fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
                 
 
-                
+                <!-- 
                     <li>
                         <a target="_blank" href="http://weibo.com/u/6076241093">
                             <span class="fa-stack fa-lg">
@@ -615,14 +602,14 @@
                             </span>
                         </a>
                     </li>
-                
+                 -->
 
                 
                     <li>
                         <a target="_blank" href="https://www.facebook.com/nit.san.904">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                <i class="fa-brands fa-facebook fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -633,7 +620,7 @@
                         <a target="_blank"  href="https://github.com/i3nit">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -641,10 +628,11 @@
 
                 
                     <li>
-                        <a target="_blank"  href="https://www.linkedin.com/in/3-nit-7968a422a">
+                        <a target="_blank"  href="https://500px.com.cn/3nit">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                <!-- <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i> -->
+                                <i class="fa-brands fa-500px fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -773,50 +761,6 @@
 
 
 <!-- Side Catalog -->
-
-<script type="text/javascript">
-    function generateCatalog (selector) {
-        var P = $('div.post-container'),a,n,t,l,i,c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#"+$(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
-            l = $('<li class="'+n+'_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;    
-    }
-
-    generateCatalog(".catalog-body");
-
-    // toggle side catalog
-    $(".catalog-toggle").click((function(e){
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    /*
-     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
-     * Fork by Hux to support padding
-     */
-    async("/js/jquery.nav.js", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
 
 
 
