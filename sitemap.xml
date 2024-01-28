@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://3nit.website/2023/01/26/Manim%20Community%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://3nit.website/2024/01/26/Manim%20Community%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2024-01-28</lastmod>
     
@@ -97,6 +97,20 @@
   </url>
   
   <url>
+    <loc>https://3nit.website/tags/%E9%AB%98%E4%B8%AD/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://3nit.website/tags/%E8%A7%A3%E8%B0%9C/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://3nit.website/tags/Manim/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -112,20 +126,6 @@
   
   <url>
     <loc>https://3nit.website/tags/Python/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://3nit.website/tags/%E9%AB%98%E4%B8%AD/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://3nit.website/tags/%E8%A7%A3%E8%B0%9C/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
