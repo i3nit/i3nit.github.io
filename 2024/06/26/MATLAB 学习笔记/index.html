@@ -198,11 +198,11 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="format"><a href="#format" class="headerlink" title="format()"></a><code>format()</code></h3><p><a href="https://ww2.mathworks.cn/help/matlab/ref/format.html?searchHighlight=format&amp;s_tid=srchtitle_support_results_1_format" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/ref/format.html?searchHighlight=format&amp;s_tid=srchtitle_support_results_1_format</a></p>
+                <h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><h6 id="format"><a href="#format" class="headerlink" title="format()"></a><code>format()</code></h6><p><a href="https://ww2.mathworks.cn/help/matlab/ref/format.html?searchHighlight=format&amp;s_tid=srchtitle_support_results_1_format" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/ref/format.html?searchHighlight=format&amp;s_tid=srchtitle_support_results_1_format</a></p>
 <pre><code>format(style)
 
 formate style
-</code></pre><h4 id="style"><a href="#style" class="headerlink" title="style"></a>style</h4><table>
+</code></pre><table>
 <thead>
 <tr>
 <th><code>Style</code></th>
@@ -294,7 +294,23 @@ formate style
 </tr>
 </tbody>
 </table>
-<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h4 id="创建和合并"><a href="#创建和合并" class="headerlink" title="创建和合并"></a>创建和合并</h4><table>
+<hr>
+<hr>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><h3 id="索引和元素编辑"><a href="#索引和元素编辑" class="headerlink" title="索引和元素编辑"></a>索引和元素编辑</h3><ul>
+<li>使用<code>()</code>索引</li>
+</ul>
+<h4 id="位置索引"><a href="#位置索引" class="headerlink" title="位置索引"></a>位置索引</h4><h4 id="线性索引"><a href="#线性索引" class="headerlink" title="线性索引"></a>线性索引</h4><ul>
+<li>按列索引</li>
+</ul>
+<h4 id="逻辑值索引"><a href="#逻辑值索引" class="headerlink" title="逻辑值索引"></a>逻辑值索引</h4><ul>
+<li>按列输出</li>
+</ul>
+<h4 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h4><pre><code>A(:,3) = []
+A(2,:) = []
+
+A(2,2)=[]
+A null assignment can have only one non-colon index. 
+</code></pre><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><table>
 <thead>
 <tr>
 <th><a href="https://ww2.mathworks.cn/help/matlab/ref/zeros.html" target="_blank" rel="noopener"><code>zeros</code></a></th>
@@ -330,10 +346,22 @@ formate style
 <td><a href="https://ww2.mathworks.cn/help/matlab/ref/blkdiag.html" target="_blank" rel="noopener"><code>blkdiag</code></a></td>
 <td>分块对角矩阵</td>
 </tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>sparese()</code></p>
+<pre><code>S = sparse(A)
+S = sparse(m,n)
+</code></pre></li>
+</ul>
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><table>
+<thead>
 <tr>
-<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.cat.html" target="_blank" rel="noopener"><code>cat</code></a></td>
-<td>串联数组。</td>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/double.cat.html" target="_blank" rel="noopener"><code>cat</code></a></th>
+<th>串联数组。</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.horzcat.html" target="_blank" rel="noopener"><code>horzcat</code></a></td>
 <td>水平串联数组</td>
@@ -344,7 +372,11 @@ formate style
 </tr>
 </tbody>
 </table>
-<h4 id="？？？"><a href="#？？？" class="headerlink" title="？？？"></a>？？？</h4><h5 id="sum"><a href="#sum" class="headerlink" title="sum()"></a><code>sum()</code></h5><h4 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h4><table>
+<ul>
+<li><code>[A, B]</code>, <code>[A; B]</code></li>
+<li></li>
+</ul>
+<h3 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h3><table>
 <thead>
 <tr>
 <th><a href="https://ww2.mathworks.cn/help/matlab/ref/linspace.html" target="_blank" rel="noopener"><code>linspace</code></a></th>
@@ -366,7 +398,7 @@ formate style
 </tr>
 </tbody>
 </table>
-<h4 id="size-amp-shape"><a href="#size-amp-shape" class="headerlink" title="size &amp; shape"></a>size &amp; shape</h4><table>
+<h3 id="size-amp-shape"><a href="#size-amp-shape" class="headerlink" title="size &amp; shape"></a>size &amp; shape</h3><table>
 <thead>
 <tr>
 <th><a href="https://ww2.mathworks.cn/help/matlab/ref/length.html" target="_blank" rel="noopener"><code>length</code></a></th>
@@ -394,12 +426,1261 @@ formate style
 <td><a href="https://ww2.mathworks.cn/help/matlab/ref/resize.html" target="_blank" rel="noopener"><code>resize</code></a></td>
 <td>Resize data by adding or removing elements <em>(自 R2023b 起)</em></td>
 </tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/reshape.html" target="_blank" rel="noopener"><code>reshape</code></a></td>
+<td>通过重新排列现有元素来重构数组</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>reshape()</code></p>
+<pre><code>&gt;&gt; reshape(A,2,3)
+ans =
+     1     3     5
+     2     4     6
+&gt;&gt; reshape(A,[2],3)
+ans =
+     1     3     5
+     2     4     6
+</code></pre></li>
+</ul>
+<h3 id="重排"><a href="#重排" class="headerlink" title="重排"></a>重排</h3><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/sort.html" target="_blank" rel="noopener"><code>sort</code></a></th>
+<th>对数组元素排序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.sortrows.html" target="_blank" rel="noopener"><code>sortrows</code></a></td>
+<td>对矩阵行或表行进行排序</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/flip.html" target="_blank" rel="noopener"><code>flip</code></a></td>
+<td>翻转元素顺序</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/fliplr.html" target="_blank" rel="noopener"><code>fliplr</code></a></td>
+<td>将数组从左向右翻转</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/flipud.html" target="_blank" rel="noopener"><code>flipud</code></a></td>
+<td>将数组从上向下翻转</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/rot90.html" target="_blank" rel="noopener"><code>rot90</code></a></td>
+<td>将数组旋转 90 度</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/transpose.html" target="_blank" rel="noopener"><code>transpose</code></a></td>
+<td>转置向量或矩阵</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>isempty()</code></li>
+</ul>
+<hr>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h3><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/double.html" target="_blank" rel="noopener"><code>double</code></a></th>
+<th>双精度数组</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/single.html" target="_blank" rel="noopener"><code>single</code></a></td>
+<td>单精度数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/int8.html" target="_blank" rel="noopener"><code>int8</code></a></td>
+<td>8 位有符号整数数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/int16.html" target="_blank" rel="noopener"><code>int16</code></a></td>
+<td>16 位有符号整数数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/int32.html" target="_blank" rel="noopener"><code>int32</code></a></td>
+<td>32 位有符号整数数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/int64.html" target="_blank" rel="noopener"><code>int64</code></a></td>
+<td>64 位有符号整数数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/uint8.html" target="_blank" rel="noopener"><code>uint8</code></a></td>
+<td>8 位无符号整数数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/uint16.html" target="_blank" rel="noopener"><code>uint16</code></a></td>
+<td>16 位无符号整数数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/uint32.html" target="_blank" rel="noopener"><code>uint32</code></a></td>
+<td>32 位无符号整数数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/uint64.html" target="_blank" rel="noopener"><code>uint64</code></a></td>
+<td>64 位无符号整数数组</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>double()</code></p>
+<pre><code>&gt;&gt; a = double(10.00)
+</code></pre></li>
+</ul>
+<h4 id="显示转换"><a href="#显示转换" class="headerlink" title="显示转换"></a>显示转换</h4><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/cast.html" target="_blank" rel="noopener"><code>cast</code></a></th>
+<th>将变量转换为不同的数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/typecast.html" target="_blank" rel="noopener"><code>typecast</code></a></td>
+<td>在不更改基础数据的情况下转换数据类型</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>class()</code></p>
+<pre><code>&gt;&gt; class(a)
+ans =
+    &apos;double&apos;
+
+&gt;&gt; class(ones(3))
+ans =
+    &apos;double&apos;
+</code></pre></li>
+<li><p><code>cast()</code></p>
+<pre><code>B = cast(A,newclass)
+B = cast(A,&quot;like&quot;,p)
+</code></pre></li>
+</ul>
+<h4 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h4><ul>
+<li><code>x = 2 + 3i</code></li>
+<li><code>z = complex(x, y)</code></li>
+<li><p><code>real()</code>, <code>imag()</code></p>
+<pre><code>zr = real(z)
+zr =
+    4.7842    0.8648    1.2616
+    2.6130    4.8987    4.3787
+    4.4007    1.3572    3.6865
+
+zi = imag(z)
+zi =
+   -1.0921   -1.5931   -2.2753
+   -0.0941   -2.3898   -3.7538
+   -7.1512   -5.2915   -0.5182
+</code></pre></li>
+</ul>
+<h4 id="Inf-NaN"><a href="#Inf-NaN" class="headerlink" title="Inf,NaN"></a><code>Inf</code>,<code>NaN</code></h4><h3 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h3><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a><a href="https://ww2.mathworks.cn/help/matlab/ref/struct.html" target="_blank" rel="noopener">结构体</a></h3><h4 id="创建、引用结构体"><a href="#创建、引用结构体" class="headerlink" title="创建、引用结构体"></a>创建、引用结构体</h4><pre><code>Student.name = &apos;wangx&apos;;
+Student.sex = &apos;Male&apos;;
+Student.height = &apos;170&apos;;
+
+Student(2).name = &apos;zhangsan&apos;;
+Student(2).sex = &apos;Male&apos;;
+Student(2).height = 172;
+
+field1 = &apos;f1&apos;;  value1 = zeros(1,10);
+field2 = &apos;f2&apos;;  value2 = {&apos;a&apos;, &apos;b&apos;};
+field3 = &apos;f3&apos;;  value3 = {pi, pi.^2};
+field4 = &apos;f4&apos;;  value4 = {&apos;fourth&apos;};
+s = struct(field1,value1,field2,value2,field3,value3,field4,value4)
+</code></pre><h3 id="元胞"><a href="#元胞" class="headerlink" title="元胞"></a><a href="https://ww2.mathworks.cn/help/matlab/cell-arrays.html?s_tid=CRUX_lftnav" target="_blank" rel="noopener">元胞</a></h3><h4 id="创建元胞"><a href="#创建元胞" class="headerlink" title="创建元胞"></a>创建元胞</h4><pre><code>c = {42,rand(5),&quot;abcd&quot;}
+c =
+  1×3 cell array
+    {[42]}    {5×5 double}    {[&quot;abcd&quot;]}
+
+C = {1,2,3;
+ &apos;text&apos;,rand(5,10,2),{11; 22; 33}}
+C=_2×3 cell array_
+    {[   1]}    {[          2]}    {[     3]}
+    {&apos;text&apos;}    {5x10x2 double}    {3x1 cell}
+
+C = cell(n)
+C = cell(sz1,...,szN)
+C = cell(sz)
+D = cell(obj)
+</code></pre><h4 id="访问元胞元素："><a href="#访问元胞元素：" class="headerlink" title="访问元胞元素："></a><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/access-data-in-a-cell-array.html" target="_blank" rel="noopener">访问元胞元素</a>：</h4><p>例如，假设有一个包含混合数据的 2×3 元胞数组。</p>
+<pre><code>C = {&apos;one&apos;,&apos;two&apos;,&apos;three&apos;; 
+     100,200,rand(3,3)}
+
+C=_2×3 cell array_
+    {&apos;one&apos;}    {&apos;two&apos;}    {&apos;three&apos;   }
+    {[100]}    {[200]}    {3x3 double}
+</code></pre><p>每个元素都包含在一个元胞内。如果使用标准圆括号对该数组进行索引，得到的结果是一个包含元胞的元胞数组子集。</p>
+<pre><code>C2 = C(1:2,1:2)
+
+C2=_2×2 cell array_
+    {&apos;one&apos;}    {&apos;two&apos;}
+    {[100]}    {[200]}
+</code></pre><p>要向特定元胞读取或写入内容，请用花括号将索引括起来。</p>
+<pre><code>R = C{2,3}
+
+R = _3×3_
+
+    0.8147    0.9134    0.2785
+    0.9058    0.6324    0.5469
+    0.1270    0.0975    0.9575
+</code></pre><h3 id="函数句柄"><a href="#函数句柄" class="headerlink" title="函数句柄"></a><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/creating-a-function-handle.html" target="_blank" rel="noopener">函数句柄</a></h3><hr>
+<hr>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><pre><code>function [y1,...,yN] = myfun(x1,...,xM)
+    %code
+end
+</code></pre><p><code>function [y1,...,yN] = myfun(x1,...,xM)</code> 声明名为 <code>myfun</code> 的函数，该函数接受输入 <code>x1,...,xM</code> 并返回输出 <code>y1,...,yN</code>。此声明语句必须是函数的第一个可执行代码行。有效的函数名称以字母字符开头，并且可以包含字母、数字或下划线。</p>
+<ul>
+<li><p><code>return</code></p>
+<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/creating-a-function-handle.html" target="_blank" rel="noopener">匿名函数</a></h3><p>  h = @(arglist)anonymous_function</p>
+<p>  sqr = @(n) n.^2;<br>  x = sqr(3)<br>  x =</p>
+<pre><code>9
+</code></pre></li>
+</ul>
+<hr>
+<hr>
+<h2 id="运算和数学"><a href="#运算和数学" class="headerlink" title="运算和数学"></a>运算和数学</h2><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="算数运算"><a href="#算数运算" class="headerlink" title="算数运算"></a>算数运算</h4><h6 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h6><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/plus.html" target="_blank" rel="noopener"><code>+</code></a></th>
+<th>添加数字，追加字符串</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/sum.html" target="_blank" rel="noopener"><code>sum</code></a></td>
+<td>数组元素总和</td>
+</tr>
+</tbody>
+</table>
+<h6 id="减法"><a href="#减法" class="headerlink" title="减法"></a>减法</h6><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/minus.html" target="_blank" rel="noopener"><code>-</code></a></th>
+<th>减法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/diff.html" target="_blank" rel="noopener"><code>diff</code></a></td>
+<td>差分和近似导数</td>
+</tr>
+</tbody>
+</table>
+<h6 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h6><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/times.html" target="_blank" rel="noopener"><code>.*</code></a></th>
+<th>乘法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/mtimes.html" target="_blank" rel="noopener"><code>*</code></a></td>
+<td>矩阵乘法</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/prod.html" target="_blank" rel="noopener"><code>prod</code></a></td>
+<td>数组元素的乘积</td>
+</tr>
+</tbody>
+</table>
+<h6 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h6><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/rdivide.html" target="_blank" rel="noopener"><code>./</code></a></th>
+<th>数组右除</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/ldivide.html" target="_blank" rel="noopener"><code>.\</code></a></td>
+<td>数组左除</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/mrdivide.html" target="_blank" rel="noopener"><code>/</code></a></td>
+<td>求解关于 x 的线性方程组 xA = B</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/mldivide.html" target="_blank" rel="noopener"><code>\</code></a></td>
+<td>求解关于 x 的线性方程组 Ax = B</td>
+</tr>
+</tbody>
+</table>
+<h6 id="幂"><a href="#幂" class="headerlink" title="幂"></a>幂</h6><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/power.html" target="_blank" rel="noopener"><code>.^</code></a></th>
+<th>按元素求幂</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/mpower.html" target="_blank" rel="noopener"><code>^</code></a></td>
+<td>矩阵幂</td>
+</tr>
+</tbody>
+</table>
+<h6 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h6><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/transpose.html" target="_blank" rel="noopener"><code>.&#39;</code></a></th>
+<th>转置向量或矩阵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/ctranspose.html" target="_blank" rel="noopener"><code>&#39;</code></a></td>
+<td>复共轭转置</td>
+</tr>
+</tbody>
+</table>
+<h6 id="模除法和舍入"><a href="#模除法和舍入" class="headerlink" title="模除法和舍入"></a>模除法和舍入</h6><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/mod.html" target="_blank" rel="noopener"><code>mod</code></a></th>
+<th>除后的余数（取模运算）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/rem.html" target="_blank" rel="noopener"><code>rem</code></a></td>
+<td>除后的余数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/idivide.html" target="_blank" rel="noopener"><code>idivide</code></a></td>
+<td>带有舍入选项的整除</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/ceil.html" target="_blank" rel="noopener"><code>ceil</code></a></td>
+<td>向正无穷舍入</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/fix.html" target="_blank" rel="noopener"><code>fix</code></a></td>
+<td>向零舍入</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/floor.html" target="_blank" rel="noopener"><code>floor</code></a></td>
+<td>向负无穷舍入</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/round.html" target="_blank" rel="noopener"><code>round</code></a></td>
+<td>舍入至最近的小数或整数</td>
+</tr>
+</tbody>
+</table>
+<h4 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/eq.html" target="_blank" rel="noopener"><code>==</code></a></td>
+<td>确定相等性</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/ge.html" target="_blank" rel="noopener"><code>&gt;=</code></a></td>
+<td>决定大于或等于</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/gt.html" target="_blank" rel="noopener"><code>&gt;</code></a></td>
+<td>确定大于</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/le.html" target="_blank" rel="noopener"><code>&lt;=</code></a></td>
+<td>确定小于等于</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/lt.html" target="_blank" rel="noopener"><code>&lt;</code></a></td>
+<td>确定小于</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/ne.html" target="_blank" rel="noopener"><code>~=</code></a></td>
+<td>确定不相等性</td>
+</tr>
+</tbody>
+</table>
+<h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/and.html" target="_blank" rel="noopener"><code>&amp;</code></a></th>
+<th>计算逻辑 AND</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/not.html" target="_blank" rel="noopener"><code>~</code></a></td>
+<td>计算逻辑 NOT</td>
+</tr>
+<tr>
+<td>[`\</td>
+<td>`](<a href="https://ww2.mathworks.cn/help/matlab/ref/or.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/ref/or.html</a>)</td>
+<td>计算逻辑 OR</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/xor.html" target="_blank" rel="noopener"><code>xor</code></a></td>
+<td>计算逻辑异 OR</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/all.html" target="_blank" rel="noopener"><code>all</code></a></td>
+<td>确定所有的数组元素是为非零还是 <code>true</code></td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/any.html" target="_blank" rel="noopener"><code>any</code></a></td>
+<td>确定是否有任何数组元素非零</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/find.html" target="_blank" rel="noopener"><code>find</code></a></td>
+<td>查找非零元素的索引和值</td>
+</tr>
+</tbody>
+</table>
+<h4 id="集合运算"><a href="#集合运算" class="headerlink" title="集合运算"></a>集合运算</h4><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/double.intersect.html" target="_blank" rel="noopener"><code>intersect</code></a></th>
+<th>设置两个数组的交集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.ismember.html" target="_blank" rel="noopener"><code>ismember</code></a></td>
+<td>判断数组元素是否为集数组成员</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.setdiff.html" target="_blank" rel="noopener"><code>setdiff</code></a></td>
+<td>设置两个数组的差集</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.setxor.html" target="_blank" rel="noopener"><code>setxor</code></a></td>
+<td>设置两个数组的异或</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.union.html" target="_blank" rel="noopener"><code>union</code></a></td>
+<td>设置两个数组的并集</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.unique.html" target="_blank" rel="noopener"><code>unique</code></a></td>
+<td>数组中的唯一值</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/ismembertol.html" target="_blank" rel="noopener"><code>ismembertol</code></a></td>
+<td>容差范围内的集合成员</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/uniquetol.html" target="_blank" rel="noopener"><code>uniquetol</code></a></td>
+<td>容差内的唯一值</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/table.join.html" target="_blank" rel="noopener"><code>join</code></a></td>
+<td>使用键变量按行合并两个表或时间表</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/table.innerjoin.html" target="_blank" rel="noopener"><code>innerjoin</code></a></td>
+<td>两个表或时间表之间的内联</td>
+</tr>
+</tbody>
+</table>
+<h3 id="离散数学"><a href="#离散数学" class="headerlink" title="离散数学"></a><a href="https://ww2.mathworks.cn/help/matlab/discrete-math.html?s_tid=CRUX_lftnav" target="_blank" rel="noopener">离散数学</a></h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/factor.html" target="_blank" rel="noopener"><code>factor</code></a></td>
+<td>质因数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/factorial.html" target="_blank" rel="noopener"><code>factorial</code></a></td>
+<td>输入的阶乘</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/gcd.html" target="_blank" rel="noopener"><code>gcd</code></a></td>
+<td>最大公约数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/isprime.html" target="_blank" rel="noopener"><code>isprime</code></a></td>
+<td>确定哪些数组元素为质数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/lcm.html" target="_blank" rel="noopener"><code>lcm</code></a></td>
+<td>最小公倍数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/nchoosek.html" target="_blank" rel="noopener"><code>nchoosek</code></a></td>
+<td>二项式系数或所有组合</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/perms.html" target="_blank" rel="noopener"><code>perms</code></a></td>
+<td>所有可能的排列</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/matchpairs.html" target="_blank" rel="noopener"><code>matchpairs</code></a></td>
+<td>求解线性分配问题</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/primes.html" target="_blank" rel="noopener"><code>primes</code></a></td>
+<td>小于等于输入值的质数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/rat.html" target="_blank" rel="noopener"><code>rat</code></a></td>
+<td>有理分式近似值</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/rats.html" target="_blank" rel="noopener"><code>rats</code></a></td>
+<td>有理输出</td>
+</tr>
+</tbody>
+</table>
+<h3 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a><a href="https://ww2.mathworks.cn/help/matlab/linear-algebra.html?s_tid=CRUX_lftnav" target="_blank" rel="noopener">线性代数</a></h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/inv.html" target="_blank" rel="noopener"><code>inv</code></a></td>
+<td>矩阵求逆</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/cross.html" target="_blank" rel="noopener"><code>cross</code></a></td>
+<td>叉积</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/dot.html" target="_blank" rel="noopener"><code>dot</code></a></td>
+<td>点积</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/det.html" target="_blank" rel="noopener"><code>det</code></a></td>
+<td>矩阵行列式</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/rank.html" target="_blank" rel="noopener"><code>rank</code></a></td>
+<td>矩阵的秩</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/rref.html" target="_blank" rel="noopener"><code>rref</code></a></td>
+<td>简化的行阶梯形矩阵（Gauss-Jordan 消去法）</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.trace.html" target="_blank" rel="noopener"><code>trace</code></a></td>
+<td>对角线元素之和</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/tril.html" target="_blank" rel="noopener"><code>tril</code></a></td>
+<td>矩阵的下三角形部分</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/triu.html" target="_blank" rel="noopener"><code>triu</code></a></td>
+<td>矩阵的上三角部分</td>
+</tr>
+</tbody>
+</table>
+<h3 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a><a href="https://ww2.mathworks.cn/help/matlab/random-number-generation.html" target="_blank" rel="noopener">随机数生成</a></h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/rand.html" target="_blank" rel="noopener"><code>rand</code></a></td>
+<td>均匀分布的随机数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/randn.html" target="_blank" rel="noopener"><code>randn</code></a></td>
+<td>正态分布的随机数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/randi.html" target="_blank" rel="noopener"><code>randi</code></a></td>
+<td>均匀分布的伪随机整数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/randperm.html" target="_blank" rel="noopener"><code>randperm</code></a></td>
+<td>整数的随机排列</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>rand()</code><br><code>X = rand</code> 返回从区间 (0,1) 的均匀分布中得到的随机标量。<br><code>X = rand(n)</code> 返回一个由均匀分布的随机数组成的 <code>n</code>×<code>n</code> 矩阵。<br><code>X = rand([sz1,...,szN])</code> 返回由随机数组成的 <code>sz1</code>×…×<code>szN</code> 数组，其中 <code>sz1,...,szN</code> 指示每个维度的大小。例如：<code>rand(3,4)</code> 返回一个 3×4 的矩阵。</p>
+<pre><code>X = rand
+X = rand(n)
+X = rand(sz1,...,szN)
+</code></pre></li>
+<li><p><code>randi()</code><br><code>X = randi([imax])</code> 返回一个介于 <code>1</code> 和 <code>imax</code> 之间的伪随机整数标量。</p>
+<pre><code>X = randi(imax)
+X = randi(imax,n)
+X = randi(imax,sz1,...,szN)
+
+X = randi([imin,imax],___)
+</code></pre></li>
+</ul>
+<hr>
+<hr>
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/if.html" target="_blank" rel="noopener"><code>if, elseif, else</code></a></td>
+<td>条件为 true 时执行语句</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/switch.html" target="_blank" rel="noopener"><code>switch, case, otherwise</code></a></td>
+<td>执行多组语句中的一组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/for.html" target="_blank" rel="noopener"><code>for</code></a></td>
+<td>用来重复指定次数的 <code>for</code> 循环</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/while.html" target="_blank" rel="noopener"><code>while</code></a></td>
+<td>条件为 true 时重复执行的 <code>while</code> 循环</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/try.html" target="_blank" rel="noopener"><code>try, catch</code></a></td>
+<td>执行语句并捕获产生的错误</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/break.html" target="_blank" rel="noopener"><code>break</code></a></td>
+<td>终止执行 for 或 while 循环</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/return.html" target="_blank" rel="noopener"><code>return</code></a></td>
+<td>将控制权交还给调用脚本或函数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/continue.html" target="_blank" rel="noopener"><code>continue</code></a></td>
+<td>将控制传递给 <code>for</code> 或 <code>while</code> 循环的下一迭代</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/pause.html" target="_blank" rel="noopener"><code>pause</code></a></td>
+<td>暂时停止执行 MATLAB</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/parfor.html" target="_blank" rel="noopener"><code>parfor</code></a></td>
+<td>并行 for 循环</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/end.html" target="_blank" rel="noopener"><code>end</code></a></td>
+<td>终止代码块或指示最大数组索引</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>if</code>, <code>elseif</code>, <code>else</code></p>
+<pre><code>if `expression`
+    `statements`
+elseif `expression`
+    `statements`
+else
+    `statements`
+end
+</code></pre></li>
+<li><p><code>switch</code></p>
+<pre><code>switch `switch_expression`
+   case `case_expression`
+      `statements`
+   case `case_expression`
+      `statements`
+    ...
+   otherwise
+      `statements`
+end
+</code></pre></li>
+<li><p><code>for</code></p>
+<pre><code>for v = 1.0:-0.2:0.0
+   disp(v)
+end
+
+for v = [1 5 8 17]
+   disp(v)
+end
+</code></pre></li>
+<li><p><code>try</code>, <code>catch</code></p>
+<pre><code>try
+   `statements`
+catch `exception`
+   `statements`
+end
+</code></pre></li>
+<li><p><code>pause(n)</code></p>
+</li>
+</ul>
+<hr>
+<hr>
+<h2 id="代数"><a href="#代数" class="headerlink" title="代数"></a>代数</h2><h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><p>MATLAB® 将多项式表示为行向量，其中包含按降幂排序的系数。</p>
+<pre><code> %p(x)=x2−4x+4。
+p = [1 -4 4];
+
+ %p(x)=4x5−3x2+2x+33。
+p = [4 0 0 -3 2 33];
+</code></pre><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/poly.html" target="_blank" rel="noopener"><code>poly</code></a></td>
+<td>具有指定根的多项式或特征多项式</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/polydiv.html" target="_blank" rel="noopener"><code>polydiv</code></a></td>
+<td>Polynomial long division <em>(自 R2024a 起)</em></td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/polyfit.html" target="_blank" rel="noopener"><code>polyfit</code></a></td>
+<td>多项式曲线拟合</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/residue.html" target="_blank" rel="noopener"><code>residue</code></a></td>
+<td>部分分式展开（部分分式分解）</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/roots.html" target="_blank" rel="noopener"><code>roots</code></a></td>
+<td>多项式根</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/polyval.html" target="_blank" rel="noopener"><code>polyval</code></a></td>
+<td>多项式计算</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/polyint.html" target="_blank" rel="noopener"><code>polyint</code></a></td>
+<td>多项式积分</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/polyder.html" target="_blank" rel="noopener"><code>polyder</code></a></td>
+<td>多项式微分</td>
+</tr>
+</tbody>
+</table>
+<h3 id="符号运算"><a href="#符号运算" class="headerlink" title="符号运算"></a>符号运算</h3><p><a href="https://ww2.mathworks.cn/help/symbolic/index.html?s_tid=CRUX_lftnav" target="_blank" rel="noopener">Symbolic Math Toolbox</a></p>
+<h4 id="符号创建"><a href="#符号创建" class="headerlink" title="符号创建"></a>符号创建</h4><ul>
+<li><p><code>sym()</code>, <code>syms</code>符号变量</p>
+<pre><code>% 创建符号
+a1Sym = sym(1/3)
+a2Sym = sym(pi)
+bSym = sin(sym(pi))
+sym(&apos;1234567 + 1i&apos;)
+
+y = sym(&apos;y&apos;)
+syms x
+syms a b c
+A = sym(&apos;a&apos;,[1 10])
+
+%符号表达式
+phi = (1 + sqrt(sym(5)))/2;
+f = phi^2 - phi - 1
+
+syms a b c x
+f = a*x^2 + b*x + c
+
+%等式
+eqn = (x^2 + y^2)^4 == (x^2 - y^2)^2;
+</code></pre></li>
+<li><p><code>syms</code>符号函数</p>
+<pre><code>syms f(x,y)
+f(x,y) = x^2*y
+    f(x, y) =
+    x^2*y
+
+%Find the value of `f` at `(3,2)`.
+f(3,2)
+    ans =
+    18
+
+%Symbolic functions accept array inputs.
+xVal = 1:5;
+yVal = 3:7;
+f(xVal,yVal)
+    ans =
+    [ 3, 16, 45, 96, 175]
+%从隐函数生成
+y1 = @(a,b) cos(a) + cos(b); 
+ys1 = sym(y1)；
+</code></pre><h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><h5 id="多项式-1"><a href="#多项式-1" class="headerlink" title="多项式"></a>多项式</h5></li>
+<li><code>collect(f)</code></li>
+<li><p><code>factor(f)</code></p>
+<pre><code>syms x
+g = x^3 + 6*x^2 + 11*x + 6;
+factor(g)
+
+ans =
+[ x + 3, x + 2, x + 1]
+</code></pre></li>
+<li><code>expand(f)</code></li>
+<li><code>simplify(f)</code></li>
+<li><code>subs(f,[x,y,z],[a,b,c])</code></li>
+<li><p><code>coeffs()</code></p>
+<pre><code>syms x y
+cx = coeffs(x^3 + 2*x^2*y + 3*x*y^2 + 4*y^3, x)
+cy = coeffs(x^3 + 2*x^2*y + 3*x*y^2 + 4*y^3, y)
+    cx =
+    [ 4*y^3, 3*y^2, 2*y, 1]
+
+    cy =
+    [ x^3, 2*x^2, 3*x, 4]
+</code></pre></li>
+<li><code>coeffs(f,x)</code></li>
+<li><code>sym2poly(f)</code></li>
+<li><code>poly2sym(pl,x)</code></li>
+<li><a href="https://ww2.mathworks.cn/help/symbolic/sym.numden.html?searchHighlight=numden&amp;s_tid=srchtitle_support_results_1_numden#d126e267654" target="_blank" rel="noopener"><code>[N,D] = numden(A)</code></a></li>
+<li><a href="https://ww2.mathworks.cn/help/symbolic/sym.finverse.html?searchHighlight=finverse&amp;s_tid=srchtitle_support_results_1_finverse#d126e192673" target="_blank" rel="noopener"><code>finverse(f)</code></a></li>
+<li><p><a href="https://ww2.mathworks.cn/help/symbolic/compose.html?searchHighlight=compose&amp;s_tid=srchtitle_support_results_2_compose#d126e142949" target="_blank" rel="noopener"><code>compose(f,g)</code></a></p>
+<h5 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h5></li>
+<li><p><code>diff(f,x,y)</code></p>
+</li>
+<li><code>int(f,x,[0,1])</code></li>
+<li><code>limit(f,x,0,&quot;left&quot;)</code></li>
+<li>`taylor(f,x,0,’Order’,10)</li>
+<li><code>symsum(f,k,[0,Inf])</code><h4 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h4></li>
+<li><p><code>solve()</code></p>
+<pre><code>syms x
+solve(x^3 - 6*x^2 == 6 - 11*x)
+
+solve(x^3 - 6*x^2 + 11*x - 6)
+
+%If you do not specify any variable, you get the solution of an equation for the alphabetically closest to `x` variable.
+syms x y
+solve(6*x^2 - 6*x^2*y + x*y^2 - x*y + y^3 - y^2 == 0, y)
+    ans =
+        1
+      2*x
+     -3*x
+
+syms x y z
+[x, y, z] = solve(z == 4*x, x == y, z == x^2 + y^2)
+</code></pre></li>
+<li><p><code>dsolve(ode,[cond])</code></p>
+<pre><code>syms y(x)
+Dy = diff(y);
+
+ode = diff(y,x,2) == cos(2*x)-y;
+cond1 = y(0) == 1;
+cond2 = Dy(0) == 0;
+
+%Solve `ode` for `y`. Simplify the solution using the `simplify` function.
+
+conds = [cond1 cond2];
+ySol(x) = dsolve(ode,conds);
+ySol = simplify(ySol)
+    ySol(x) =
+    1 - (8*sin(x/2)^4)/3
+</code></pre></li>
+</ul>
+<h4 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h4><ul>
+<li><p><code>fplot()</code>, <code>fplot3()</code>, <code>fpolarplot()</code></p>
+<pre><code>syms x
+f = x^3 - 6*x^2 + 11*x - 6;
+fplot(f)
+
+%参数方程
+syms t
+fplot3(t^2*sin(10*t), t^2*cos(10*t), t)
+</code></pre></li>
+<li><p><code>fimplicit()</code></p>
+<pre><code>%设定界限
+syms x y
+eqn = (x^2 + y^2)^4 == (x^2 - y^2)^2;
+fimplicit(eqn, [-1, 1])
+</code></pre></li>
+</ul>
+<hr>
+<h2 id="绘图-1"><a href="#绘图-1" class="headerlink" title="绘图"></a>绘图</h2><h3 id="网格-1"><a href="#网格-1" class="headerlink" title="网格"></a>网格</h3><ul>
+<li><p><code>meshgrid()</code></p>
+<pre><code>[X,Y] = meshgrid(x,y)
+[X,Y] = meshgrid(x)
+[X,Y,Z] = meshgrid(x,y,z)
+[X,Y,Z] = meshgrid(x)
+
+%使用均匀间隔的 _x_ 坐标和 _y_ 坐标在区间 [-2,2] 内创建二维网格。
+x = -2:0.25:2;
+y = x;
+[X,Y] = meshgrid(x);
+</code></pre></li>
+</ul>
+<p>在二维网格上计算并绘制函数 f(x,y)=xe−x2−y2。</p>
+<p> Get </p>
+<p>F = X.*exp(-X.^2-Y.^2);<br>surf(X,Y,F)</p>
+<h3 id="图形对象-figure"><a href="#图形对象-figure" class="headerlink" title="图形对象 figure"></a>图形对象 <a href="(https://ww2.mathworks.cn/help/matlab/graphics-objects.html"><code>figure</code></a></h3><ul>
+<li><p><code>get(h,propName)</code>, <code>set(h,propName,Value)</code></p>
+<h3 id="子图-subplot"><a href="#子图-subplot" class="headerlink" title="子图 subplot"></a>子图 <a href="https://ww2.mathworks.cn/help/matlab/ref/subplot.html" target="_blank" rel="noopener"><code>subplot</code></a></h3><p>  ubplot(m,n,p)<br>  subplot(m,n,p,’replace’)<br>  subplot(m,n,p,’align’)<br>  ax = subplot(___)<br>  subplot(ax)<br>  %eg1</p>
+<pre><code>subplot(2,2,1);
+x = linspace(-3.8,3.8);
+y_cos = cos(x);
+plot(x,y_cos);
+title(&apos;Subplot 1: Cosine&apos;)
+
+subplot(2,2,2);
+y_poly = 1 - x.^2./2 + x.^4./24;
+plot(x,y_poly,&apos;g&apos;);
+title(&apos;Subplot 2: Polynomial&apos;)
+
+subplot(2,2,[3,4]);
+plot(x,y_cos,&apos;b&apos;,x,y_poly,&apos;g&apos;);
+title(&apos;Subplot 3 and 4: Both&apos;)
+</code></pre><h3 id="绘图类型"><a href="#绘图类型" class="headerlink" title="绘图类型"></a>绘图类型</h3><h4 id="线图"><a href="#线图" class="headerlink" title="线图"></a>线图</h4></li>
+<li><p><code>plot()</code>, <code>plot3()</code></p>
+<pre><code>plot(X,Y)
+plot(X,Y,LineSpec)
+
+plot(X1,Y1,...,Xn,Yn)
+plot(X1,Y1,LineSpec1,...,Xn,Yn,LineSpecn)
+
+plot(Y)
+plot(Y,LineSpec)
+
+% 指定属性
+figure
+plot(x,y,&apos;--gs&apos;,...
+    &apos;LineWidth&apos;,2,...
+    &apos;MarkerSize&apos;,10,...
+    &apos;MarkerEdgeColor&apos;,&apos;b&apos;,...
+    &apos;MarkerFaceColor&apos;,[0.5,0.5,0.5])
+</code></pre><ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.chart.primitive.area-properties.html" target="_blank" rel="noopener">Area 属性</a></li>
+<li><p><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.chart.primitive.line-properties.html" target="_blank" rel="noopener">Line 属性</a> </p>
+<pre><code>p = plot(x,y1,x,y2);
+
+p(1).LineWidth = 2;
+p(2).Marker = &apos;*&apos;;
+</code></pre></li>
+<li><p><a href="https://ww2.mathworks.cn/help/matlab/ref/title.html" target="_blank" rel="noopener"><code>title</code></a></p>
+<pre><code>title(titletext)
+title(titletext,subtitletext)
+title(___,Name,Value)
+
+title(ax1,&apos;Top Plot&apos;)
+title(ax2,&apos;Bottom Plot&apos;)
+
+t = title(___)
+t.Color = &apos;red&apos;;
+</code></pre></li>
+<li><p><a href="https://ww2.mathworks.cn/help/matlab/ref/xlabel.html" target="_blank" rel="noopener"><code>xlabel</code></a>, <code>ylabel</code></p>
+<pre><code>xlabel(txt)
+xlabel(target,txt)
+xlabel(___,Name,Value)
+t = xlabel(___)
+</code></pre></li>
+<li><p><a href="https://ww2.mathworks.cn/help/matlab/ref/xlim.html" target="_blank" rel="noopener"><code>xlim</code></a>, <code>ylim</code></p>
+<pre><code>xlim(limits)
+xlim(limitmethod)
+xlim(limitmode)
+xl = xlim
+limmethod = xlim(&quot;method&quot;)
+limmode = xlim(&quot;mode&quot;)
+___ = xlim(target,___)
+
+%eg1
+    xlim([0 5])
+    xlim([0 inf])
+    xlim tight
+    xlim auto
+
+%eg2
+    xl = xlim
+    xl = _1×2_
+        -3     4
+</code></pre></li>
+<li><p><a href="https://ww2.mathworks.cn/help/matlab/ref/legend.html" target="_blank" rel="noopener"><code>legend</code></a></p>
+<pre><code>legend
+legend(label1,...,labelN)
+legend(labels)
+legend(subset,___)
+legend(target,___)
+
+legend(___,Name,Value)
+
+legend(vsbl)
+legend(&apos;off&apos;)
+
+lgd = legend(___)
+
+%eg1
+    x = linspace(0,pi);
+    y1 = cos(x);
+    plot(x,y1)
+
+    hold on 
+    y2 = cos(2*x);
+    plot(x,y2)
+
+    legend(&apos;cos(x)&apos;,&apos;cos(2x)&apos;)
+
+    y3 = cos(3*x);
+    plot(x,y3,&apos;DisplayName&apos;,&apos;cos(3x)&apos;)
+
+%eg2
+    tiledlayout(2,1)
+    y1 = rand(3);
+    ax1 = nexttile; 
+    plot(y1)
+
+    y2 = rand(5);
+    ax2 = nexttile; 
+    plot(y2)
+
+    legend(ax1,{&apos;Line 1&apos;,&apos;Line 2&apos;,&apos;Line 3&apos;})
+</code></pre></li>
+<li><p><code>hold on</code>, <code>hold off</code></p>
+</li>
+<li><code>axis equal</code></li>
+<li><code>grid on</code>, <code>grid off</code></li>
+<li><p><code>yyaxis</code></p>
+<pre><code>yyaxis left
+yyaxis right
+yyaxis(ax,___)
+%eg1
+    load(&apos;accidents.mat&apos;,&apos;hwydata&apos;)
+    ind = 1:51;
+    drivers = hwydata(:,5);
+    pop = hwydata(:,7);
+
+    yyaxis left
+    scatter(ind,drivers)
+    title(&apos;Highway Data&apos;)
+    xlabel(&apos;States&apos;)
+    ylabel(&apos;Licensed Drivers (thousands)&apos;)
+
+    yyaxis right
+    scatter(ind,pop)
+    ylabel(&apos;Vehicle Miles Traveled (millions)&apos;)
+</code></pre></li>
+<li><p><code>text</code></p>
+<pre><code>x = linspace(-5,5);
+y = x.^3-12*x;
+plot(x,y)
+
+xt = [-2 2];
+yt = [16 -16];
+str = {&apos;local max&apos;,&apos;local min&apos;};
+text(xt,yt,str)
+</code></pre></li>
+<li><p><code>colormap</code> </p>
+<pre><code>colormap map
+colormap(map)
+colormap(target,map)
+cmap = colormap(___)
+cmap = colormap
+cmap = colormap(target)
+</code></pre></li>
+</ul>
+</li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/loglog.html" target="_blank" rel="noopener"><code>loglog</code></a>, <a href="https://ww2.mathworks.cn/help/matlab/ref/semilogx.html" target="_blank" rel="noopener"><code>semilogx</code></a>, <a href="https://ww2.mathworks.cn/help/matlab/ref/semilogy.html" target="_blank" rel="noopener"><code>semilogy</code></a></li>
+<li><code>scatter()</code></li>
+<li><p><code>polarplot()</code></p>
+</li>
+<li><p><a href="https://ww2.mathworks.cn/help/matlab/ref/fplot.html" target="_blank" rel="noopener"><code>fplot</code></a>, <a href="https://ww2.mathworks.cn/help/matlab/ref/fimplicit.html" target="_blank" rel="noopener"><code>fimplicit</code></a>, <a href="https://ww2.mathworks.cn/help/matlab/ref/fplot3.html" target="_blank" rel="noopener"><code>fplot3</code></a></p>
+<ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.function.functionline-properties.html" target="_blank" rel="noopener">FunctionLine 属性</a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.function.implicitfunctionline-properties.html" target="_blank" rel="noopener">ImplicitFunctionLine 属性</a></li>
+</ul>
+</li>
+<li><p><a href="https://ww2.mathworks.cn/help/matlab/ref/area.html" target="_blank" rel="noopener"><code>area</code></a></p>
+</li>
+</ul>
+<h4 id="数据分布图"><a href="#数据分布图" class="headerlink" title="数据分布图"></a>数据分布图</h4><ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.chart.primitive.histogram.html" target="_blank" rel="noopener"><code>histogram</code></a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/scatter.html" target="_blank" rel="noopener"><code>scatter</code></a>， <a href="https://ww2.mathworks.cn/help/matlab/ref/scatter3.html" target="_blank" rel="noopener"><code>scatter3</code></a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/pie.html" target="_blank" rel="noopener"><code>pie</code></a>, <a href="https://ww2.mathworks.cn/help/matlab/ref/pie3.html" target="_blank" rel="noopener"><code>pie3</code></a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/bar.html" target="_blank" rel="noopener"><code>bar</code></a>, <a href="https://ww2.mathworks.cn/help/matlab/ref/barh.html" target="_blank" rel="noopener"><code>barh</code></a>,  <a href="https://ww2.mathworks.cn/help/matlab/ref/bar3.html" target="_blank" rel="noopener"><code>bar3</code></a>, <a href="https://ww2.mathworks.cn/help/matlab/ref/bar3h.html" target="_blank" rel="noopener"><code>bar3h</code></a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/stem.html" target="_blank" rel="noopener"><code>stem</code></a>, <a href="https://ww2.mathworks.cn/help/matlab/ref/stem3.html" target="_blank" rel="noopener"><code>stem3</code></a></li>
+</ul>
+<h4 id="等高线图"><a href="#等高线图" class="headerlink" title="等高线图"></a>等高线图</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/contour.html" target="_blank" rel="noopener"><code>contour</code></a></td>
+<td>矩阵的等高线图</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/contourf.html" target="_blank" rel="noopener"><code>contourf</code></a></td>
+<td>填充的二维等高线图</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/contourc.html" target="_blank" rel="noopener"><code>contourc</code></a></td>
+<td>低级等高线矩阵计算</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/contour3.html" target="_blank" rel="noopener"><code>contour3</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="向量场图"><a href="#向量场图" class="headerlink" title="向量场图"></a>向量场图</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/quiver.html" target="_blank" rel="noopener"><code>quiver</code></a></td>
+<td>箭头图或向量图</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/quiver3.html" target="_blank" rel="noopener"><code>quiver3</code></a></td>
+<td>三维箭头图或向量图</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/streamline.html" target="_blank" rel="noopener"><code>streamline</code></a></td>
+<td>基于二维或三维向量数据绘制流线图</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/streamslice.html" target="_blank" rel="noopener"><code>streamslice</code></a></td>
+<td>在切片平面中绘制流线图</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>quiver</code> </p>
+<pre><code>quiver(X,Y,U,V)
+quiver(U,V)
+</code></pre></li>
+</ul>
+<h4 id="曲面图"><a href="#曲面图" class="headerlink" title="曲面图"></a>曲面图</h4><ul>
+<li><code>surf()</code>, <code>mesh()</code><h4 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h4></li>
+<li><p><code>movie</code>, <code>getframe</code>, <code>drawnow</code></p>
+<pre><code>movie(M)
+movie(M,n)
+movie(M,n,fps)
+%g1
+    h = figure;
+    Z = peaks;
+    surf(Z)
+
+    loops = 40;
+    M(loops) = struct(&apos;cdata&apos;,[],&apos;colormap&apos;,[]);
+
+    h.Visible = &apos;off&apos;;
+    for j = 1:loops
+        X = sin(j*pi/10)*Z;
+        surf(X,Z)
+        drawnow
+        M(j) = getframe;
+    end
+
+    h.Visible = &apos;on&apos;;
+    movie(M);
+</code></pre></li>
+</ul>
+<h4 id="图像输出"><a href="#图像输出" class="headerlink" title="图像输出"></a>图像输出</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/exportgraphics.html" target="_blank" rel="noopener"><code>exportgraphics</code></a></td>
+<td>将绘图或图形内容保存到文件 <em>(自 R2020a 起)</em></td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/copygraphics.html" target="_blank" rel="noopener"><code>copygraphics</code></a></td>
+<td>将绘图或图形内容复制到剪贴板 <em>(自 R2020a 起)</em></td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/exportapp.html" target="_blank" rel="noopener"><code>exportapp</code></a></td>
+<td>以图像或 PDF 格式捕获 App <em>(自 R2020b 起)</em></td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/getframe.html" target="_blank" rel="noopener"><code>getframe</code></a></td>
+<td>捕获坐标区或图窗作为影片帧</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/saveas.html" target="_blank" rel="noopener"><code>saveas</code></a></td>
+<td>将图窗保存为特定文件格式</td>
+</tr>
 </tbody>
 </table>
 <blockquote>
-<p><code>resize()</code>,  <code>reshape()</code></p>
+<p><code>show</code></p>
 </blockquote>
-<h5 id="isempty"><a href="#isempty" class="headerlink" title="isempty"></a>isempty</h5>
+<hr>
+<h2 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h2><hr>
+<h2 id="数据导入"><a href="#数据导入" class="headerlink" title="数据导入"></a>数据导入</h2><ul>
+<li><p><code>readtable</code></p>
+<pre><code>T = readtable(&quot;patients.xls&quot;);
+T(1:5,1:5)
+
+ans =
+
+  5×5 table
+
+      LastName        Gender      Age              Location               Height
+    ____________    __________    ___    _____________________________    ______
+
+    {&apos;Smith&apos;   }    {&apos;Male&apos;  }    38     {&apos;County General Hospital&apos;  }      71  
+    {&apos;Johnson&apos; }    {&apos;Male&apos;  }    43     {&apos;VA Hospital&apos;              }      69  
+    {&apos;Williams&apos;}    {&apos;Female&apos;}    38     {&apos;St. Mary&apos;s Medical Center&apos;}      64  
+    {&apos;Jones&apos;   }    {&apos;Female&apos;}    40     {&apos;VA Hospital&apos;              }      67  
+    {&apos;Brown&apos;   }    {&apos;Female&apos;}    49     {&apos;County General Hospital&apos;  }      64
+</code></pre></li>
+<li><p><code>readmatrix</code></p>
+<pre><code>M = readmatrix(&quot;basic_matrix.xls&quot;)
+
+M = 5×4
+
+     6     8     3     1
+     5     4     7     3
+     1     6     7    10
+     4     2     8     2
+     2     7     5     9
+</code></pre></li>
+<li><p><code>readcell</code></p>
+<pre><code>C = readcell(&quot;basic_cell.xls&quot;)
+
+C = 3×3 cell array
+    {[                   1]}    {[    2]}    {[        3]}
+    {&apos;hello&apos;               }    {&apos;world&apos;}    {[      NaN]}
+    {[10-Oct-2018 10:27:56]}    {[    1]}    {1x1 missing}
+</code></pre></li>
+</ul>
+<hr>
+<hr>
+<h2 id="？？？"><a href="#？？？" class="headerlink" title="？？？"></a>？？？</h2><ul>
+<li><code>sum()</code></li>
+<li>幻方</li>
+<li>线性方程解法</li>
+</ul>
+<hr>
+
 
                 <hr>
 
