@@ -93,6 +93,13 @@
 
                         
                         <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/about/about.html">About</a>
                         </li>
                         
@@ -101,13 +108,6 @@
                         
                         <li>
                             <a href="/archives/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -172,8 +172,6 @@
                         
                           <a class="tag" href="/tags/#Manim" title="Manim">Manim</a>
                         
-                          <a class="tag" href="/tags/#编程" title="编程">编程</a>
-                        
                           <a class="tag" href="/tags/#Python" title="Python">Python</a>
                         
                     </div>
@@ -235,13 +233,59 @@
 <blockquote>
 <p>By default, any animation passed to <code>play()</code> lasts for exactly one second.</p>
 </blockquote>
-<h5 id="自定义动画"><a href="#自定义动画" class="headerlink" title="自定义动画"></a>自定义动画</h5>
+<h5 id="自定义动画-不会"><a href="#自定义动画-不会" class="headerlink" title="自定义动画(不会)"></a>自定义动画(不会)</h5><blockquote>
+<p>References: <a href="https://docs.manim.community/en/stable/reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation" title="manim.animation.animation.Animation" target="_blank" rel="noopener"><code>Animation</code></a> <a href="https://docs.manim.community/en/stable/reference/manim.mobject.text.numbers.DecimalNumber.html#manim.mobject.text.numbers.DecimalNumber" title="manim.mobject.text.numbers.DecimalNumber" target="_blank" rel="noopener"><code>DecimalNumber</code></a> <a href="https://docs.manim.community/en/stable/reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation.interpolate_mobject" title="manim.animation.animation.Animation.interpolate_mobject" target="_blank" rel="noopener"><code>interpolate_mobject()</code></a> <a href="https://docs.manim.community/en/stable/reference/manim.scene.scene.Scene.html#manim.scene.scene.Scene.play" title="manim.scene.scene.Scene.play" target="_blank" rel="noopener"><code>play()</code></a><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">from manim import *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Count</span>(<span class="title">Animation</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(<span class="keyword">self</span>, <span class="symbol">number:</span> DecimalNumber, <span class="symbol">start:</span> float, <span class="symbol">end:</span> float, **kwargs)</span></span> -&gt; <span class="symbol">None:</span></span><br><span class="line">        <span class="comment"># Pass number as the mobject of the animation</span></span><br><span class="line">        <span class="keyword">super</span>().__init_<span class="number">_</span>(number,  **kwargs)</span><br><span class="line">        <span class="comment"># Set start and end</span></span><br><span class="line">        <span class="keyword">self</span>.start = start</span><br><span class="line">        <span class="keyword">self</span>.<span class="keyword">end</span> = <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">interpolate_mobject</span><span class="params">(<span class="keyword">self</span>, <span class="symbol">alpha:</span> float)</span></span> -&gt; <span class="symbol">None:</span></span><br><span class="line">        <span class="comment"># Set value of DecimalNumber according to alpha</span></span><br><span class="line">        value = <span class="keyword">self</span>.start + (alpha * (<span class="keyword">self</span>.<span class="keyword">end</span> - <span class="keyword">self</span>.start))</span><br><span class="line">        <span class="keyword">self</span>.mobject.set_value(value)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CountingScene</span>(<span class="title">Scene</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">construct</span><span class="params">(<span class="keyword">self</span>)</span></span><span class="symbol">:</span></span><br><span class="line">        <span class="comment"># Create Decimal Number and add it to scene</span></span><br><span class="line">        number = DecimalNumber().set_color(WHITE).scale(<span class="number">5</span>)</span><br><span class="line">        <span class="comment"># Add an updater to keep the DecimalNumber centered as its value changes</span></span><br><span class="line">        number.add_updater(lambda <span class="symbol">number:</span> number.move_to(ORIGIN))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.add(number)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.wait()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Play the Count Animation to count from 0 to 100 in 4 seconds</span></span><br><span class="line">        <span class="keyword">self</span>.play(Count(number, <span class="number">0</span>, <span class="number">100</span>), run_time=<span class="number">4</span>, rate_func=linear)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.wait()</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h5 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h5><p><a href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_center" title="manim.mobject.mobject.Mobject.get_center" target="_blank" rel="noopener"><code>get_center()</code></a> , <a href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_top" title="manim.mobject.mobject.Mobject.get_top" target="_blank" rel="noopener"><code>get_top()</code></a> and <a href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Mobject.html#manim.mobject.mobject.Mobject.get_start" title="manim.mobject.mobject.Mobject.get_start" target="_blank" rel="noopener"><code>get_start()</code></a><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> manim import *</span><br><span class="line"></span><br><span class="line">class MobjectExample(Scene):</span><br><span class="line">    def construct(self):</span><br><span class="line">        p1= [-1,-1,0]</span><br><span class="line">        p2= [1,-1,0]</span><br><span class="line">        p3= [1,1,0]</span><br><span class="line">        p4= [-1,1,0]</span><br><span class="line">        a = Line(p1,p2).append_points(Line(p2,p3).points).append_points(Line(p3,p4).points)</span><br><span class="line">        point_start= a.get_start()</span><br><span class="line">        point_end  = a.get_end()</span><br><span class="line">        point_center = a.get_center()</span><br><span class="line">        self.<span class="builtin-name">add</span>(Text(f<span class="string">"a.get_start() = &#123;np.round(point_start,2).tolist()&#125;"</span>, <span class="attribute">font_size</span>=24).to_edge(UR).set_color(YELLOW))</span><br><span class="line">        self.<span class="builtin-name">add</span>(Text(f<span class="string">"a.get_end() = &#123;np.round(point_end,2).tolist()&#125;"</span>, <span class="attribute">font_size</span>=24).next_to(self.mobjects[-1],DOWN).set_color(RED))</span><br><span class="line">        self.<span class="builtin-name">add</span>(Text(f<span class="string">"a.get_center() = &#123;np.round(point_center,2).tolist()&#125;"</span>, <span class="attribute">font_size</span>=24).next_to(self.mobjects[-1],DOWN).set_color(BLUE))</span><br><span class="line"></span><br><span class="line">        self.<span class="builtin-name">add</span>(Dot(a.get_start()).set_color(YELLOW).scale(2))</span><br><span class="line">        self.<span class="builtin-name">add</span>(Dot(a.get_end()).set_color(RED).scale(2))</span><br><span class="line">        self.<span class="builtin-name">add</span>(Dot(a.get_top()).set_color(GREEN_A).scale(2))</span><br><span class="line">        self.<span class="builtin-name">add</span>(Dot(a.get_bottom()).set_color(GREEN_D).scale(2))</span><br><span class="line">        self.<span class="builtin-name">add</span>(Dot(a.get_center()).set_color(BLUE).scale(2))</span><br><span class="line">        </span><br><span class="line">        self.<span class="builtin-name">add</span>(Dot(a.point_from_proportion(0.5)).set_color(ORANGE).scale(2))</span><br><span class="line">        </span><br><span class="line">        self.<span class="builtin-name">add</span>(*[Dot(x) <span class="keyword">for</span> x <span class="keyword">in</span> a.points])</span><br><span class="line">        </span><br><span class="line">        self.<span class="builtin-name">add</span>(a)</span><br></pre></td></tr></table></figure></p>
+<h5 id="形状转换"><a href="#形状转换" class="headerlink" title="形状转换"></a>形状转换</h5><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">from</span> manim <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">ExampleTransform</span>(<span class="type">Scene</span>):</span></span><br><span class="line"><span class="class">    def construct(<span class="title">self</span>):</span></span><br><span class="line"><span class="class">        self.camera.background_color = <span class="type">WHITE</span></span></span><br><span class="line"><span class="class">        #背景色</span></span><br><span class="line"><span class="class">        m1 = <span class="type">Square</span>().set_color(<span class="type">RED</span>)</span></span><br><span class="line"><span class="class">        m2 = <span class="type">Rectangle</span>().set_color(<span class="type">RED</span>).rotate(0.2)</span></span><br><span class="line"><span class="class">        </span></span><br><span class="line"><span class="class">        self.play(<span class="type">Transform</span>(<span class="title">m1</span>,<span class="title">m2</span>))</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>The Transform function maps points of the previous mobject to the points of the next mobject. This might result in strange behaviour, e.g. when the dots of one mobject are arranged clockwise and the other points are arranged counterclockwise. Here it might help to use the flip function and reposition the points via the <a href="https://numpy.org/doc/stable/reference/generated/numpy.roll.html" target="_blank" rel="noopener">roll</a> function of numpy:</p>
+</blockquote>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">from</span> manim <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">ExampleRotation</span>(<span class="type">Scene</span>):</span></span><br><span class="line"><span class="class">    def construct(<span class="title">self</span>):</span></span><br><span class="line"><span class="class">        self.camera.background_color = <span class="type">WHITE</span></span></span><br><span class="line"><span class="class">        m1a = <span class="type">Square</span>().set_color(<span class="type">RED</span>).shift(<span class="type">LEFT</span>)</span></span><br><span class="line"><span class="class">        m1b = <span class="type">Circle</span>().set_color(<span class="type">RED</span>).shift(<span class="type">LEFT</span>)</span></span><br><span class="line"><span class="class">        m2a= <span class="type">Square</span>().set_color(<span class="type">BLUE</span>).shift(<span class="type">RIGHT</span>)</span></span><br><span class="line"><span class="class">        m2b= <span class="type">Circle</span>().set_color(<span class="type">BLUE</span>).shift(<span class="type">RIGHT</span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">        points = m2a.points</span></span><br><span class="line"><span class="class">        points = np.roll(<span class="title">points</span>, <span class="title">int</span>(<span class="title">len</span>(<span class="title">points</span>)/4), axis=0)</span></span><br><span class="line"><span class="class">        m2a.points = points</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">        self.play(<span class="type">Transform</span>(<span class="title">m1a</span>,<span class="title">m1b</span>),<span class="type">Transform</span>(<span class="title">m2a</span>,<span class="title">m2b</span>), run_time=1)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h3><h4 id="单文件全局配置"><a href="#单文件全局配置" class="headerlink" title="单文件全局配置"></a>单文件全局配置</h4><blockquote>
+<p>The most direct way of configuring Manim is through the global <code>config</code> object, which is an instance of <a href="https://docs.manim.community/en/stable/reference/manim._config.utils.ManimConfig.html#manim._config.utils.ManimConfig" title="manim._config.utils.ManimConfig" target="_blank" rel="noopener"><code>ManimConfig</code></a>. Each property of this class is a config option that can be accessed either with standard attribute syntax or with dict-like syntax:</p>
+</blockquote>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from manim import *</span><br><span class="line"><span class="built_in">config</span>.<span class="keyword">background_color </span>= WHITE    <span class="comment">#preferred</span></span><br><span class="line"><span class="built_in">config</span>[<span class="string">"background_color"</span>] = WHITE</span><br></pre></td></tr></table></figure>
+<h4 id="Folder-wide-config-file"><a href="#Folder-wide-config-file" class="headerlink" title="Folder-wide config file"></a><strong>Folder-wide</strong> config file</h4><p>通过 <code>manim.cfg</code> 配置<br>To use a local configuration file when rendering your scene, you must create a file with the name <code>manim.cfg</code> in the same directory as your scene code.<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[CLI]</span></span><br><span class="line"><span class="comment"># my config file</span></span><br><span class="line"><span class="attr">output_file</span> = myscene</span><br><span class="line"><span class="attr">save_as_gif</span> = <span class="literal">True</span></span><br><span class="line"><span class="attr">background_color</span> = WHITE</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>Starting with [CLI]</p>
+</blockquote>
+<blockquote>
+<p>The names of the configuration options admissible in config files are exactly the same as the <strong>long names</strong> of the corresponding command- line flags. For example, the <code>-c</code> and <code>--background_color</code> flags are interchangeable, but the config file only accepts <code>background_color</code> as an admissible option.</p>
+</blockquote>
+<h4 id="User-wide-config-file"><a href="#User-wide-config-file" class="headerlink" title="User-wide config file"></a>User-wide config file</h4><p>:通过 <code>manim.cfg</code> 配置<br>The user-wide config file lives in a special folder, depending on the operating system.</p>
+<ul>
+<li>Windows: <code>UserDirectory</code>/AppData/Roaming/Manim/manim.cfg</li>
+<li>MacOS: <code>UserDirectory</code>/.config/manim/manim.cfg</li>
+<li>Linux: <code>UserDirectory</code>/.config/manim/manim.cfg</li>
+</ul>
+<blockquote>
+<p>Manim will read both files, but if they are incompatible, <strong>the folder-wide file takes precedence</strong>.</p>
+</blockquote>
+<h4 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h4><h4 id="Config-优先级"><a href="#Config-优先级" class="headerlink" title="Config 优先级"></a>Config 优先级</h4><p>To summarize, the order of precedence for configuration options, from lowest to highest precedence is:</p>
+<ol>
+<li><p>Library-wide config file,</p>
+</li>
+<li><p>user-wide config file, if it exists,</p>
+</li>
+<li><p>folder-wide config file, if it exists OR custom config file, if passed via <code>--config_file</code>,</p>
+</li>
+<li><p>other CLI flags, and</p>
+</li>
+<li><p>any programmatic changes made after the config system is set.</p>
+</li>
+</ol>
+
 
                 <hr>
 
                 
 
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2024/06/26/MATLAB 学习笔记/" data-toggle="tooltip" data-placement="top" title="">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
@@ -293,8 +337,6 @@
                     <div class="tags">
                        
                           <a class="tag" href="/tags/#Manim" title="Manim">Manim</a>
-                        
-                          <a class="tag" href="/tags/#编程" title="编程">编程</a>
                         
                           <a class="tag" href="/tags/#Python" title="Python">Python</a>
                         

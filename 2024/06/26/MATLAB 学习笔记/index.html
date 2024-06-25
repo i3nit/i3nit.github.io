@@ -13,11 +13,11 @@
 
     <title>
         
-          Archives - Blog | 3nit 的網誌
+          Blog | 3nit 的網誌
         
     </title>
 
-    <link rel="canonical" href="https://3nit.website/archives/">
+    <link rel="canonical" href="https://3nit.website/2024/06/26/MATLAB 学习笔记/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -150,129 +150,372 @@
 
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/tag-bg.jpg')">
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://3nit.website/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        /* background-image: url('/img/home-bg.jpg') */
+        /* background-image: url('undefined') */
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Archives</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading"></span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1></h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 3nit on
+                        2024-06-26
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 归档列表 -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-            
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-             <!-- 归档列表 -->
+                <h3 id="format"><a href="#format" class="headerlink" title="format()"></a><code>format()</code></h3><p><a href="https://ww2.mathworks.cn/help/matlab/ref/format.html?searchHighlight=format&amp;s_tid=srchtitle_support_results_1_format" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/ref/format.html?searchHighlight=format&amp;s_tid=srchtitle_support_results_1_format</a><br>    format(style)</p>
+<pre><code>formate style
+</code></pre><h4 id="style"><a href="#style" class="headerlink" title="style"></a>style</h4><table>
+<thead>
+<tr>
+<th><code>Style</code></th>
+<th>结果</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>short</code></td>
+<td>短固定十进制小数点格式，小数点后包含 4 位数。这是默认数值设置。</td>
+<td><code>3.1416</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>长固定十进制小数点格式，<code>double</code> 值的小数点后包含 15 位数，<code>single</code> 值的小数点后包含 7 位数。</td>
+<td><code>3.141592653589793</code></td>
+</tr>
+<tr>
+<td><code>shortE</code></td>
+<td>短科学记数法，小数点后包含 4 位数。</td>
+<td><code>3.1416e+00</code></td>
+</tr>
+<tr>
+<td><code>longE</code></td>
+<td>长科学记数法，<code>double</code> 值的小数点后包含 15 位数，<code>single</code> 值的小数点后包含 7 位数。</td>
+<td><code>3.141592653589793e+00</code></td>
+</tr>
+<tr>
+<td><code>shortG</code></td>
+<td>短固定十进制小数点格式或科学记数法（取更紧凑的一个），总共 5 位。</td>
+<td><code>3.1416</code></td>
+</tr>
+<tr>
+<td><code>longG</code></td>
+<td>长固定十进制小数点格式或科学记数法（取更紧凑的一个），对于 <code>double</code> 值，总共 15 位；对于 <code>single</code> 值，总共 7 位。</td>
+<td><code>3.14159265358979</code></td>
+</tr>
+<tr>
+<td><code>shortEng</code></td>
+<td>短工程记数法，小数点后包含 4 位数，指数为 3 的倍数。</td>
+<td><code>3.1416e+000</code></td>
+</tr>
+<tr>
+<td><code>longEng</code></td>
+<td>长工程记数法，包含 15 位有效位数，指数为 3 的倍数。</td>
+<td><code>3.14159265358979e+000</code></td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>正/负格式，对正、负和零元素分别显示 <code>+</code>、<code>-</code> 和空白字符。</td>
+<td><code>+</code></td>
+</tr>
+<tr>
+<td><code>bank</code></td>
+<td>货币格式，小数点后包含 2 位数。</td>
+<td><code>3.14</code></td>
+</tr>
+<tr>
+<td><code>hex</code></td>
+<td>二进制双精度数字的十六进制表示形式。</td>
+<td><code>400921fb54442d18</code></td>
+</tr>
+<tr>
+<td><code>rational</code></td>
+<td>小整数的比率。</td>
+<td><code>355/113</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>Style</code></th>
+<th>结果</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>compact</code></td>
+<td>隐藏过多的空白行以便在一个屏幕上显示更多输出。</td>
+<td><code>theta = pi/2   theta =   1.5708</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>添加空白行以使输出更易于阅读。这是行距的默认设置。</td>
+<td><code>theta = pi/2      theta =      1.5708</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h4 id="创建和合并"><a href="#创建和合并" class="headerlink" title="创建和合并"></a>创建和合并</h4><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/zeros.html" target="_blank" rel="noopener"><code>zeros</code></a></th>
+<th>创建全零数组</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/ones.html" target="_blank" rel="noopener"><code>ones</code></a></td>
+<td>创建全部为 1 的数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/rand.html" target="_blank" rel="noopener"><code>rand</code></a></td>
+<td>均匀分布的随机数</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/true.html" target="_blank" rel="noopener"><code>true</code></a></td>
+<td>逻辑值 1（真）</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/false.html" target="_blank" rel="noopener"><code>false</code></a></td>
+<td>逻辑 0（假）</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/eye.html" target="_blank" rel="noopener"><code>eye</code></a></td>
+<td>单位矩阵</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/diag.html" target="_blank" rel="noopener"><code>diag</code></a></td>
+<td>创建对角矩阵或获取矩阵的对角元素</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/blkdiag.html" target="_blank" rel="noopener"><code>blkdiag</code></a></td>
+<td>分块对角矩阵</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.cat.html" target="_blank" rel="noopener"><code>cat</code></a></td>
+<td>串联数组。</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.horzcat.html" target="_blank" rel="noopener"><code>horzcat</code></a></td>
+<td>水平串联数组</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.vertcat.html" target="_blank" rel="noopener"><code>vertcat</code></a></td>
+<td>垂直串联数组</td>
+</tr>
+</tbody>
+</table>
+<h4 id="？？？"><a href="#？？？" class="headerlink" title="？？？"></a>？？？</h4><h5 id="sum"><a href="#sum" class="headerlink" title="sum()"></a><code>sum()</code></h5><h4 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h4><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/linspace.html" target="_blank" rel="noopener"><code>linspace</code></a></th>
+<th>生成线性间距向量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/logspace.html" target="_blank" rel="noopener"><code>logspace</code></a></td>
+<td>生成对数间距向量</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/meshgrid.html" target="_blank" rel="noopener"><code>meshgrid</code></a></td>
+<td>二维和三维网格</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/ndgrid.html" target="_blank" rel="noopener"><code>ndgrid</code></a></td>
+<td>N 维空间中的矩形网格</td>
+</tr>
+</tbody>
+</table>
+<h4 id="size-amp-shape"><a href="#size-amp-shape" class="headerlink" title="size &amp; shape"></a>size &amp; shape</h4><table>
+<thead>
+<tr>
+<th><a href="https://ww2.mathworks.cn/help/matlab/ref/length.html" target="_blank" rel="noopener"><code>length</code></a></th>
+<th>最大数组维度的长度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/size.html" target="_blank" rel="noopener"><code>size</code></a></td>
+<td>数组大小</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.ndims.html" target="_blank" rel="noopener"><code>ndims</code></a></td>
+<td>数组维度数目</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.numel.html" target="_blank" rel="noopener"><code>numel</code></a></td>
+<td>数组元素的数目</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/double.isempty.html" target="_blank" rel="noopener"><code>isempty</code></a></td>
+<td>确定数组是否为空</td>
+</tr>
+<tr>
+<td><a href="https://ww2.mathworks.cn/help/matlab/ref/resize.html" target="_blank" rel="noopener"><code>resize</code></a></td>
+<td>Resize data by adding or removing elements <em>(自 R2023b 起)</em></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>resize()</code>, <code>reshape()</code></p>
+</blockquote>
+<h5 id="isempty"><a href="#isempty" class="headerlink" title="isempty"></a>isempty</h5>
 
+                <hr>
 
-
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2024">
-                    <span class="tag-text">2024</span>
-                </span>
-                <ul>
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    06-26
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2024/06/26/MATLAB 学习笔记/" style="color: #0085a1">
-                        <span>
-                            Untitled
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    01-26
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2024/01/26/Manim Community 学习笔记/" style="color: #0085a1">
-                        <span>
-                            Manim Community 学习笔记
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
 
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2024/01/26/Manim Community 学习笔记/" data-toggle="tooltip" data-placement="top" title="Manim Community 学习笔记">Next Post &rarr;</a>
+                        </li>
+                    
                 </ul>
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2023">
-                    <span class="tag-text">2023</span>
-                </span>
-                <ul>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    10-02
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2023/10/02/FlowshutterTutorial/" style="color: #0085a1">
-                        <span>
-                            适用于 Sony 相机的 FlowShutter 制作不完全指北
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+
                 
 
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://3nit.website/" target="_blank">3nit&#39;s Blog</a></li>
+                    
+                        <li><a href="https://space.bilibili.com/629546720/" target="_blank">5V1A</a></li>
+                    
+                        <li><a href="https://www.lozumi.com/" target="_blank">Lozumi</a></li>
+                    
                 </ul>
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2022">
-                    <span class="tag-text">2022</span>
-                </span>
-                <ul>
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    09-06
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2022/09/06/GalaxyS8_WhenGloryComesDown/" style="color: #0085a1">
-                        <span>
-                            昔日旗舰，Galaxy S8 与三星的辉煌沉沦
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-
-                </ul>
             </div>
-            
-
 
         </div>
     </div>
-</div>
+</article>
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "3nit-website";
+    var disqus_identifier = "https://3nit.website/2024/06/26/MATLAB 学习笔记/";
+    var disqus_url = "https://3nit.website/2024/06/26/MATLAB 学习笔记/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
