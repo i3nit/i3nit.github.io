@@ -13,7 +13,7 @@
   <url>
     <loc>https://3nit.website/2024/01/26/Manim%20Community%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
-    <lastmod>2024-01-29</lastmod>
+    <lastmod>2024-06-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -205,6 +205,20 @@
   
   <url>
     <loc>https://3nit.website/tags/%E7%A1%AC%E4%BB%B6/</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://3nit.website/tags/MATLAB/</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://3nit.website/tags/%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97/</loc>
     <lastmod>2024-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
