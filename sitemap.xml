@@ -4,7 +4,7 @@
   <url>
     <loc>https://3nit.website/2024/06/26/MATLAB%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
-    <lastmod>2024-06-25</lastmod>
+    <lastmod>2024-06-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -141,6 +141,20 @@
   </url>
   
   <url>
+    <loc>https://3nit.website/tags/Manim/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://3nit.website/tags/Python/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://3nit.website/tags/Samsung/</loc>
     <lastmod>2024-06-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -169,14 +183,7 @@
   </url>
   
   <url>
-    <loc>https://3nit.website/tags/Manim/</loc>
-    <lastmod>2024-06-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://3nit.website/tags/Python/</loc>
+    <loc>https://3nit.website/tags/%E7%A1%AC%E4%BB%B6/</loc>
     <lastmod>2024-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -198,13 +205,6 @@
   
   <url>
     <loc>https://3nit.website/tags/Linux/</loc>
-    <lastmod>2024-06-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://3nit.website/tags/%E7%A1%AC%E4%BB%B6/</loc>
     <lastmod>2024-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
